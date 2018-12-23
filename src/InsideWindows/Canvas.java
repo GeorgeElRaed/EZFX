@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 
 public class Canvas extends Pane {
 
-	public static Group Items = new Group();
+	public Group Items = new Group();
 	private double xOffset, yOffset;
 	
 	public Canvas(int xoffset, int yoffset) {
@@ -28,7 +28,6 @@ public class Canvas extends Pane {
 		Items.setTranslateY(-(Constants.HEIGHT / 6 + yOffset));
 		
 		VBox vbox = new VBox();
-		//vbox.setBackground(new Background(new BackgroundFill(Color.RED, null, null)));
 		vbox.setTranslateX(getTranslateX());
 		vbox.setTranslateY(getTranslateY());
 

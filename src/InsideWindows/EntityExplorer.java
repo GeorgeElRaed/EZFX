@@ -30,7 +30,9 @@ public class EntityExplorer extends VBox {
 	private TreeView<HBox> ItemTree;
 	private List<TreeItem<HBox>> Items = new ArrayList<>();
 	private TreeItem<HBox> Root = new TreeItem<>(new HBox(new Label("Items")));
-
+	
+	private static int ID = 0;
+	
 	public EntityExplorer() {
 		setupTree();
 		setupDimensions();
@@ -85,6 +87,7 @@ public class EntityExplorer extends VBox {
 			Node newNode = null;
 			try {
 				newNode = node.getClass().newInstance();
+				newNode.setId("" + (++ID));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

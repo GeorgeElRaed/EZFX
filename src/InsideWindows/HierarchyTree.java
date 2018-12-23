@@ -24,7 +24,7 @@ import javafx.scene.layout.VBox;
 public class HierarchyTree extends VBox {
 
 	public static ObservableList<TreeItem<HBox>> Items = FXCollections.observableArrayList();
-	public static TreeView<HBox> Hierarchy = new TreeView<>();
+	public TreeView<HBox> Hierarchy = new TreeView<>();
 
 	public Pane mainBox;
 
